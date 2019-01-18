@@ -51,7 +51,6 @@ object Driver {
   
   //--定义相应的消费者组
   val group = "gp"
- 
   print("www")
   
   val data=KafkaUtils.createStream(ssc, zkHosts, group, topics).map{x=>x._2}.foreachRDD { x =>
